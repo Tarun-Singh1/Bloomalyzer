@@ -6,7 +6,10 @@ import Science from "./components/Science";
 import Dashboard from "./components/Dashboard";
 import Gallery from "./components/Gallery";
 import Timeline from "./components/Timeline";
-import { Impact, Vision, About, Footer } from "./components/Impact";
+import Impact from "./components/Impact";
+import Vision from "./components/Vision";
+import About from "./components/About"; 
+import Footer from "./components/Footer";
 
 function App() {
   return (
