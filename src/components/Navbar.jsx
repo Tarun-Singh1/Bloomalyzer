@@ -29,6 +29,8 @@ const Navbar = () => {
               <NavLink to="gallery">Gallery</NavLink>
               <NavLink to="timeline">Timeline</NavLink>
               <NavLink to="impact">Impact</NavLink>
+              <NavLink to="vision">Vision</NavLink>
+              <NavLink to="about">About</NavLink>
             </div>
           </div>
         </div>
