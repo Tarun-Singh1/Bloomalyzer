@@ -6,8 +6,8 @@ const NavLink = ({ to, children }) => (
     to={to}
     spy={true}
     smooth={true}
-    offset={-70}
-    duration={500}
+    offset={-60}
+    duration={300}
     className="cursor-pointer rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
   >
     {children}
