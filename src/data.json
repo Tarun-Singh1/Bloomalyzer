@@ -1,0 +1,70 @@
+{
+  "location": "Carrizo Plain, California",
+  "year": 2023,
+  "months": [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  ],
+  "monthly_data": [
+    {
+      "month": "Jan",
+      "ndvi": 0.2888,
+      "rainfall_mm": 175.6
+    },
+    {
+      "month": "Feb",
+      "ndvi": 0.3370,
+      "rainfall_mm": 114.9
+    },
+    {
+      "month": "Mar",
+      "ndvi": 0.3577,
+      "rainfall_mm": 113.3
+    },
+    {
+      "month": "Apr",
+      "ndvi": 0.2924,
+      "rainfall_mm": 0.1
+    },
+    {
+      "month": "May",
+      "ndvi": 0.2399,
+      "rainfall_mm": 15.2
+    },
+    {
+      "month": "Jun",
+      "ndvi": 0.2007,
+      "rainfall_mm": 16.4
+    },
+    {
+      "month": "Jul",
+      "ndvi": 0.1982,
+      "rainfall_mm": 0.0
+    },
+    {
+      "month": "Aug",
+      "ndvi": 0.1953,
+      "rainfall_mm": 15.5
+    },
+    {
+      "month": "Sep",
+      "ndvi": 0.1735,
+      "rainfall_mm": 1.1
+    },
+    {
+      "month": "Oct",
+      "ndvi": 0.1690,
+      "rainfall_mm": 0.5
+    },
+    {
+      "month": "Nov",
+      "ndvi": 0.1640,
+      "rainfall_mm": 15.2
+    },
+    {
+      "month": "Dec",
+      "ndvi": 0.1390,
+      "rainfall_mm": 58.8
+    }
+  ]
+}
