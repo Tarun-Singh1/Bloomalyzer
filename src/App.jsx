@@ -1,12 +1,12 @@
 // src/App.jsx
-import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Science from './components/Science';
-import Dashboard from './components/dashboard';
-import Gallery from './components/gallery';
-import Timeline from './components/Timeline';
-import { Impact, Vision, About, Footer } from './components/Impact';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Science from "./components/Science";
+import Dashboard from "./components/Dashboard";
+import Gallery from "./components/Gallery";
+import Timeline from "./components/Timeline";
+import { Impact, Vision, About, Footer } from "./components/Impact";
 
 function App() {
   return (
