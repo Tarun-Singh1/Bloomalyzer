@@ -34,24 +34,25 @@ An interactive web application to visualize and scientifically measure the 2023 
 
 ## About The Project
 
-The Mission : Making Earth's Vital Signs Visible to All
+### The Mission : 
+#### <i>Making Earth's Vital Signs Visible to All</i>
 The health of our planet is often described in complex charts and massive datasets, hidden from public view. Our project for the NASA Space Apps Challenge 2025 was to solve the "BloomWatch" challenge by taking one of these vital signs—the seasonal "pulse of life" in an ecosystem—and translating it into a story that is simple, beautiful, and understandable for everyone.
 
 Bloomalyzer is our solution. It's a data-driven narrative that proves the direct, cause-and-effect relationship between historic winter rains and the incredible 2023 California Superbloom that followed. We didn't just want to show a pretty picture; we wanted to make the invisible, visible.
 
 ## ✨ Key Features
-* **Interactive Before & After Slider**: A powerful tool that lets you slide between a normal, dry year (2022) and the vibrant superbloom year (2023).
-* **🔬 Dual View Mode**: Instantly toggle between a natural "True Color" photograph and a scientific "NDVI" map to see both the beauty and the data.
-* **📈 12-Month Timeline Chart**: A stunning combination chart that visualizes the complete lifecycle of the bloom and scientifically proves its connection to the preceding winter rainfall.
-* **📖 Story-Driven Interface**: A seamless, single-page experience that guides the user on a journey of scientific discovery.
+* **Interactive Before & After Slider** : A powerful tool that lets you slide between a normal, dry year (2022) and the vibrant superbloom year (2023).
+* **🔬 Dual View Mode** : Instantly toggle between a natural "True Color" photograph and a scientific "NDVI" map to see both the beauty and the data.
+* **📈 12-Month Timeline Chart** : A stunning combination chart that visualizes the complete lifecycle of the bloom and scientifically proves its connection to the preceding winter rainfall.
+* **📖 Story-Driven Interface** : A seamless, single-page experience that guides the user on a journey of scientific discovery.
 
 ## 🧪 Our Scientific Journey 
 
-This project wasn't a straight line—it was a true scientific process of exploration, testing, and pivoting based on what the data told us.
-* **1. Initial Hypothesis:** We began by investigating a phytoplankton bloom in Brazil, hoping to find a clear environmental signal.
-* **2. Data-Driven Hurdle:** Our analysis of the satellite data revealed a signal that, while scientifically interesting, was too visually subtle to create a powerful and accessible narrative.
-* **3. The Pivot:** Rather than force a weak story, we made a crucial, data-first decision to shift our focus. We targeted the 2023 California Superbloom, hypothesizing it would provide a more dramatic and measurable signal.
-* **4. The Discovery:** This pivot led to a breakthrough. Our analysis of the Carrizo Plain uncovered a massive **78% increase in vegetation density (NDVI)**—an undeniable, data-backed story of an ecosystem in full bloom.
+<i>This project wasn't a straight line—it was a true scientific process of exploration, testing, and pivoting based on what the data told us.</i>
+* **Initial Hypothesis** : We began by investigating a phytoplankton bloom in Brazil, hoping to find a clear environmental signal.
+* **Data-Driven Hurdle** : Our analysis of the satellite data revealed a signal that, while scientifically interesting, was too visually subtle to create a powerful and accessible narrative.
+* **The Pivot** : Rather than force a weak story, we made a crucial, data-first decision to shift our focus. We targeted the 2023 California Superbloom, hypothesizing it would provide a more dramatic and measurable signal.
+* **The Discovery** : This pivot led to a breakthrough. Our analysis of the Carrizo Plain uncovered a massive **78% increase in vegetation density (NDVI)**—an undeniable, data-backed story of an ecosystem in full bloom.
 
 ## 🛠️ Tech Stack
 
@@ -80,11 +81,11 @@ This project wasn't a straight line—it was a true scientific process of explor
 </p>
 
 ## Data Sources 
-* 🛰️ **Satellite Imagery**: Sentinel-2 Level-2A data from the European Space Agency (ESA), accessed via the Copernicus Browser.
-* 🌦️ **Weather Data**: Open-Meteo Historical Weather API.
+* 🛰️ **Satellite Imagery** : Sentinel-2 Level-2A data from the European Space Agency (ESA), accessed via the Copernicus Browser.
+* 🌦️ **Weather Data** : Open-Meteo Historical Weather API.
 
 ## 🚀 Meet the Team
-This project was the result of a passionate, distributed team working across multiple time zones.
+<i>This project was the result of a passionate, distributed team working across multiple time zones.</i>
 
 | Name | Role | Contribution |
 | :---: | --- | :---: |
