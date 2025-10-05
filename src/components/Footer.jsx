@@ -1,8 +1,11 @@
-// The Footer component remains unchanged.
-const Footer = () => (
+import React from 'react';
+
+const Footer = () => {
+  return (
     <footer className="bg-black py-6 text-center text-gray-400">
-        <p>&copy; 2025 Bloomalyzer Team. Created for the NASA Space Apps Challenge.</p>
+      <p>&copy; 2025 Bloomalyzer. All Rights Reserved.</p>
     </footer>
-);
+  );
+};
 
 export default Footer;

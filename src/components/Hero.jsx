@@ -1,15 +1,13 @@
-// src/components/Hero.jsx
 import React from 'react';
 import { Link } from 'react-scroll';
-import HeroImage from '../assets/hero_image.jpg'; // 1. Import your local image
+import HeroImage from '../assets/hero_image.jpg';
 
 const Hero = () => {
   return (
-    // 2. Use the imported image variable
     <section id="hero" className="h-screen w-full flex flex-col justify-center items-center relative text-center bg-cover bg-center" style={{ backgroundImage: `url(${HeroImage})` }}>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="relative z-10 p-4">
-        <h1 className="text-6xl sm:text-7xl md:text-9xl font-black tracking-tighter mb-4" style={{ textShadow: '0 0 20px rgba(0,0,0,0.7)' }}>
+        <h1 className="text-7xl md:text-9xl font-black tracking-tighter mb-4 text-white" style={{ textShadow: '0 0 20px rgba(0,0,0,0.7)' }}>
           Bloomalyzer
         </h1>
         <p className="text-xl md:text-2xl text-gray-200" style={{ textShadow: '0 0 10px rgba(0,0,0,0.7)' }}>
