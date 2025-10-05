@@ -1,34 +1,44 @@
-// src/components/Gallery.jsx
 import React from 'react';
 
-// 1. Import your local gallery images
+// Import your local gallery images
 import galleryImg1 from '../assets/gallery_1.jpg';
 import galleryImg2 from '../assets/gallery_2.jpg';
 import galleryImg3 from '../assets/gallery_3.jpg';
 
+// A redesigned card component to match the new screenshot
 const GalleryCard = ({ imageSrc, title, children }) => (
-  <div className="bg-gray-800 p-4 rounded-lg">
-    <img src={imageSrc} alt={title} className="rounded-md mb-4 object-cover h-64 w-full" />
-    <h3 className="text-xl font-bold text-teal-400">{title}</h3>
-    <p className="text-gray-400 mt-2">{children}</p>
+  <div 
+    className="relative rounded-xl overflow-hidden h-96 flex flex-col justify-end p-6 text-white shadow-lg transform transition-transform duration-300 hover:scale-105"
+    style={{ backgroundImage: `url(${imageSrc})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+  >
+    {/* Gradient overlay for text readability */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+    
+    {/* Text content */}
+    <div className="relative z-10">
+      <h3 className="text-2xl font-bold mb-2">{title}</h3>
+      <p className="text-gray-300">{children}</p>
+    </div>
   </div>
 );
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="py-20 px-4">
+    <section id="gallery" className="py-20 px-4 bg-gray-900">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 text-indigo-400">A Desert Reborn: A Visual Journey</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* 2. Use the imported images here */}
-          <GalleryCard imageSrc={galleryImg1} title="2022: The Sleeping Desert">
-            After years of drought, the Carrizo Plain was a landscape in waiting, its soil rich with dormant seeds.
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-indigo-400">A Desert Reborn: The Visual Journey</h2>
+        <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+          Our data tells a story of transformation. Here is the stunning reality on the ground, connecting our satellite view to the world below.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <GalleryCard imageSrc={galleryImg1} title="The Sleeping Desert">
+            After years of historic drought, the Carrizo Plain lay dormant, its seed bank waiting for the right conditions to emerge.
           </GalleryCard>
-          <GalleryCard imageSrc={galleryImg2} title="The Cause: Atmospheric Rivers">
-            In late 2022 and early 2023, a series of powerful "atmospheric rivers" brought historic levels of rainfall to California.
+          <GalleryCard imageSrc={galleryImg2} title="The Catalyst">
+            In the winter of 2022-23, a series of powerful "atmospheric rivers" drenched California, delivering over 200% of the average annual rainfall.
           </GalleryCard>
-          <GalleryCard imageSrc={galleryImg3} title="2023: The Superbloom">
-            The result was a "superbloom" so vast it could be seen from space, with millions of wildflowers covering the plain.
+          <GalleryCard imageSrc={galleryImg3} title="The Awakening">
+            The result was a historic "superbloom," a massive explosion of life featuring millions of wildflowers like Poppies and Fiddlenecks.
           </GalleryCard>
         </div>
       </div>
