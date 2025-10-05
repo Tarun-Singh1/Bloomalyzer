@@ -1,7 +1,7 @@
 <p align="center">
   <img src="app_logo.png" alt="Bloomalyzer Logo" width="150">
 </p>
-<h1 align="center">Bloomalyzer 🌸</h1>
+<h1 align="center">Bloomalyzer</h1>
 
 <p align="center">
 <strong>Witness a Desert in Full Bloom.</strong>
