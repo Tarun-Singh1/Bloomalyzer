@@ -1,15 +1,23 @@
 import { Link } from 'react-scroll';
 import { useRef, useState, useCallback } from "react";
 
-const NavLink = ({ to, className, children }) => {
+const NavLink = ({ to, className, isSidebarOpen, toogleSidebar, children }) => {
   return (
     <Link
       to={to}
-      spy={true}
       smooth={true}
-      offset={-60}
+      offset={-70}
+      delay={0}
       duration={300}
       className={className}
+      onClick={() => {
+        if ( (to === "hero" || to === "dashboard") && isSidebarOpen) {
+            toogleSidebar();
+        }
+        else if (to !== "hero" && to !== "dashboard") {
+            toogleSidebar();
+        }
+      }}
     >
       {children}
     </Link>
@@ -35,11 +43,11 @@ const Nav2 = () => {
             <div className="max-w-[90rem] mx-auto p-4 flex flex-wrap items-center justify-between ">
                 {/* <img src="" className="h-8" alt="BloomalyzerLogo" /> */}
                 <span className="self-center font-semibold whitespace-nowrap">
-                    <NavLink to="hero" className={`${basicLinkStyles} !text-white !font-bold !text-2xl`}> Bloomalyzer </NavLink>
+                    <NavLink to="hero" className={`${basicLinkStyles} !text-white !font-bold !text-2xl`} isSidebarOpen={isSidebarOpen} toogleSidebar={toggleSidebar}> Bloomalyzer </NavLink>
                 </span>
 
                 <div className="flex items-center md:order-2 space-x-3 md:space-x-0">
-                    <NavLink to="dashboard" className={`${basicLinkStyles} ${dashboardLinkStyles}`}> Dashboard </NavLink>
+                    <NavLink to="dashboard" className={`${basicLinkStyles} ${dashboardLinkStyles}`} isSidebarOpen={isSidebarOpen} toogleSidebar={toggleSidebar}> Dashboard </NavLink>
 
                     <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false" onClick={toggleSidebar}>
                         <span className="sr-only">Open main menu</span>
@@ -52,27 +60,27 @@ const Nav2 = () => {
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" ref={sidebarMenu}>
                     <ul className="flex flex-col items-center px-4 py-2 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg lg:space-x-5 xl:space-x-8 md:flex-row md:mt-0 md:border-0">
                         <li className={linkBorderStyles}>
-                            <NavLink to="science" className={basicLinkStyles}>Science</NavLink>
+                            <NavLink to="science" className={basicLinkStyles} toogleSidebar={toggleSidebar} >Science</NavLink>
                         </li>
 
                         <li className={linkBorderStyles}>
-                            <NavLink to="gallery" className={basicLinkStyles}>Gallery</NavLink>
+                            <NavLink to="gallery" className={basicLinkStyles} toogleSidebar={toggleSidebar}>Gallery</NavLink>
                         </li>
 
                         <li className={linkBorderStyles}>
-                            <NavLink to="timeline" className={basicLinkStyles}>Timeline</NavLink>
+                            <NavLink to="timeline" className={basicLinkStyles} toogleSidebar={toggleSidebar}>Timeline</NavLink>
                         </li>
 
                         <li className={linkBorderStyles}>
-                            <NavLink to="impact" className={basicLinkStyles}>Impact</NavLink>
+                            <NavLink to="impact" className={basicLinkStyles} toogleSidebar={toggleSidebar}>Impact</NavLink>
                         </li>
 
                         <li className={linkBorderStyles}>
-                            <NavLink to="vision" className={basicLinkStyles}>Vision</NavLink>
+                            <NavLink to="vision" className={basicLinkStyles} toogleSidebar={toggleSidebar}>Vision</NavLink>
                         </li>
 
                         <li className="w-full text-center py-2">
-                            <NavLink to="about" className={`${basicLinkStyles}`}>About</NavLink>
+                            <NavLink to="about" className={`${basicLinkStyles}`} toogleSidebar={toggleSidebar}>About</NavLink>
                         </li>
                     </ul>
                 </div>
