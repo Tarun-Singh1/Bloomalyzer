@@ -84,8 +84,8 @@ Bloomalyzer is our solution. It's a data-driven narrative that proves the direct
 | :---: | --- | :---: |
 | **Tarun** | Team Lead & Lead Python Developer | Guided the vision, led all data processing & analysis. |
 | **Vinay** | Web Developer | Built the core React components and interactivity.
-| **Aisha** | Creative Director & Storyteller | Designed the brand, wrote the narrative, created the video. |
-| **Abhinash** | Web Developer | Implemented the UI and ensured a responsive design. |
+| **Ayesha** | Creative Director & Storyteller | Designed the brand, wrote the narrative, created the video. |
+| **Abinash** | Web Developer | Implemented the UI and ensured a responsive design. |
 | **Priyanka** | Project Manager & QA Engineer | Managed the project plan, led documentation, and ensured quality. |
 | **Sen** | Research & Domain Expert | Provided the key scientific facts and real-world context. | 
 
