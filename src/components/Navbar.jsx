@@ -1,5 +1,5 @@
 import { Link } from 'react-scroll';
-import { useRef, useState, useCallback } from "react";
+import { useRef } from "react";
 import appLogo from '../assets/app_logo.png'; // 1. Import your logo
 
 const NavLink = ({ to, isSidebarOpen, toogleSidebar, className, children, ...props }) => {
