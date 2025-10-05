@@ -5,7 +5,6 @@ const NavLink = ({ to, className, children }) => {
   return (
     <Link
       to={to}
-      spy={true}
       smooth={true}
       offset={-60}
       duration={300}
