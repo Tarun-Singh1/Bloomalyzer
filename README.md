@@ -9,7 +9,7 @@
 An interactive web application to visualize and scientifically measure the 2023 California Superbloom using NASA partner satellite data.
 <br />
 <br />
-<strong><a href="https://bloomalyzer.vercel.app/">🚀 Explore the Live Demo »</a></strong>
+<strong><a href="https://bloomalyzer.vercel.app/">🌐 Explore the Live Demo »</a></strong>
 <details>
   <summary><strong>Table of Contents</strong></summary>
   <ol>
@@ -96,6 +96,21 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 * A massive thank you to the organizers of the **NASA Space Apps Challenge 2025**.
 * Data provided by the **ESA's Sentinel-2 mission** and the **Open-Meteo API**.
 * All the mentors and volunteers who made this event possible.
+🖥 Local Setup
+To run this project locally, follow these steps:
+
+## Clone the repository
+git clone https://github.com/Tarun-Singh1/Bloomalyzer.git
+
+## Navigate into the folder
+cd Bloomalyzer
+
+## Install dependencies
+npm install
+
+## Start the development server
+npm run dev
+Then open http://localhost:3000 in your browser to explore the site.
 
 <p align="center">
-Created with
+Created with ❤️
