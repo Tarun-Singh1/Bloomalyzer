@@ -26,6 +26,7 @@ An interactive web application to visualize and scientifically measure the 2023 
     <li><a href="#-tech-stack">Tech Stack</a></li>
     <li><a href="#data-sources">Data Sources</a></li>
     <li><a href="#-meet-the-team">Meet the Team</a></li>
+    <li><a href="#-license">License</a></li>
     <li><a href="#-acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -93,6 +94,9 @@ This project was the result of a passionate, distributed team working across mul
 | **Abhinash** | Web Developer | Implemented the UI and ensured a responsive design. |
 | **Priyanka** | Project Manager & QA Engineer | Managed the project plan, led documentation, and ensured quality. |
 | **Sen** | Research & Domain Expert | Provided the key scientific facts and real-world context. | 
+
+## 📜 License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## 🙏 Acknowledgments
 * A massive thank you to the organizers of the **NASA Space Apps Challenge 2025**.
