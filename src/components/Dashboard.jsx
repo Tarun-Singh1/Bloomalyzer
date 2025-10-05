@@ -26,6 +26,22 @@ const CustomImageSlider = ({ leftImage, rightImage }) => {
     });
   };
 
+  const handleTouchStart = () => {
+    const touchMoveHandler = (e) => {
+      if (e.touches.length > 0) {
+        handleMove(e.touches[0]);
+      }
+    };
+
+    const touchEndHandler = () => {
+      window.removeEventListener('touchmove', touchMoveHandler);
+      window.removeEventListener('touchend', touchEndHandler);
+    }
+
+    window.addEventListener('touchmove', touchMoveHandler);
+    window.addEventListener('touchend', touchEndHandler);
+  }
+
   return (
     <div ref={imageContainerRef} className="relative w-full aspect-[4/3] overflow-hidden select-none cursor-ew-resize">
       {/* Right (bottom) image */}
@@ -46,6 +62,7 @@ const CustomImageSlider = ({ leftImage, rightImage }) => {
         className="absolute top-0 h-full w-1 bg-white/50 cursor-ew-resize"
         style={{ left: `${sliderPosition}%` }}
         onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
       >
         <div className="absolute top-1/2 -translate-y-1/2 -ml-5 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-2xl">
           {/* == UPDATED SLIDER ICON == */}
