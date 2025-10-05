@@ -1,7 +1,6 @@
 <p align="center">
-<img src="https://www.google.com/search?q=https://placehold.co/150x150/111827/4F46E5%3Ftext%3DB" alt="Bloomalyzer Logo" width="150">
+  <img src="app_logo.png" alt="Bloomalyzer Logo" width="150">
 </p>
-
 <h1 align="center">Bloomalyzer 🌸</h1>
 
 <p align="center">
