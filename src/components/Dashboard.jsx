@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import ReactCompareImage from 'react-compare-image';
+import React, { useState, useRef } from 'react';
 import CountUp from 'react-countup';
 
 // Import your local images
@@ -7,6 +6,58 @@ import trueBefore from '../assets/true_color_before_2022.png';
 import trueAfter from '../assets/true_color_after_2023.png';
 import ndviBefore from '../assets/ndvi_map_before_2022.png';
 import ndviAfter from '../assets/ndvi_map_after_2023.png';
+
+// The Custom Slider Component with the fixed SVG Icon
+const CustomImageSlider = ({ leftImage, rightImage }) => {
+  const [sliderPosition, setSliderPosition] = useState(50);
+  const imageContainerRef = useRef(null);
+
+  const handleMove = (event) => {
+    if (!imageContainerRef.current) return;
+    const rect = imageContainerRef.current.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((event.clientX - rect.left) / rect.width) * 100));
+    setSliderPosition(x);
+  };
+
+  const handleMouseDown = () => {
+    window.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', () => {
+      window.removeEventListener('mousemove', handleMove);
+    });
+  };
+
+  return (
+    <div ref={imageContainerRef} className="relative w-full aspect-[4/3] overflow-hidden select-none cursor-ew-resize">
+      {/* Right (bottom) image */}
+      <img
+        src={rightImage}
+        alt="After"
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      {/* Left (top) image, clipped */}
+      <div
+        className="absolute top-0 left-0 w-full h-full object-cover overflow-hidden"
+        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+      >
+        <img src={leftImage} alt="Before" className="absolute top-0 left-0 w-full h-full object-cover" />
+      </div>
+      {/* Slider Handle */}
+      <div
+        className="absolute top-0 h-full w-1 bg-white/50 cursor-ew-resize"
+        style={{ left: `${sliderPosition}%` }}
+        onMouseDown={handleMouseDown}
+      >
+        <div className="absolute top-1/2 -translate-y-1/2 -ml-5 bg-white rounded-full h-10 w-10 flex items-center justify-center shadow-2xl">
+          {/* == UPDATED SLIDER ICON == */}
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 
 const Dashboard = () => {
   const [view, setView] = useState('natural');
@@ -16,8 +67,8 @@ const Dashboard = () => {
     scientific: { before: ndviBefore, after: ndviAfter }
   };
   
-  const beforeNdviScore = 0.1810;
-  const afterNdviScore = 0.3213;
+  const beforeNdviScore = 0.1819;
+  const afterNdviScore = 0.3577;
   const percentageIncrease = ((afterNdviScore - beforeNdviScore) / beforeNdviScore) * 100;
 
   return (
@@ -30,10 +81,9 @@ const Dashboard = () => {
             <button onClick={() => setView('scientific')} className={`px-4 py-2 rounded-lg font-semibold transition-all ${view === 'scientific' ? 'bg-teal-500 text-white' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'}`}>Scientific View</button>
           </div>
           <div className="shadow-2xl border-4 border-gray-700 rounded-lg overflow-hidden">
-            <ReactCompareImage leftImage={images[view].before} rightImage={images[view].after} />
+            <CustomImageSlider leftImage={images[view].before} rightImage={images[view].after} />
           </div>
         </div>
-
         {/* Right Column: Story */}
         <div className="text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-indigo-400">From Dormant to Vibrant.</h2>
