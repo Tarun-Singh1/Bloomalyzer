@@ -13,9 +13,9 @@ const Timeline = () => {
           This chart proves the direct cause-and-effect relationship between the historic winter rains and the explosion of life that followed. Notice the massive rainfall (blue bars) that drenched the desert in the early months of the year. Then, after a natural time lag, you can see the "greenness score" (teal line) rise dramatically, reaching its absolute peak in March. This isn't a coincidence; it's the beautiful, predictable rhythm of an ecosystem responding to the fuel it was given.
         </p>
         
-        <div className="h-96 w-full p-4 bg-gray-800 rounded-lg">
+        <div className="h-96 w-full p-4 max-md:px-1 bg-gray-800 rounded-lg">
           <ResponsiveContainer>
-            <ComposedChart data={jsonData.monthly_data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+            <ComposedChart data={jsonData.monthly_data} className='max-sm:scale-105'>
               <CartesianGrid stroke="#4A5568" strokeDasharray="3 3" />
               <XAxis dataKey="month" stroke="#A0AEC0" />
               <YAxis yAxisId="left" stroke="#6366F1" />
