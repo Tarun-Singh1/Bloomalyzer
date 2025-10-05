@@ -10,8 +10,7 @@
 An interactive web application to visualize and scientifically measure the 2023 California Superbloom using NASA partner satellite data.
 <br />
 <br />
-<strong><a href="[Link to your live deployed website]">🚀 Explore the Live Demo »</a></strong>
-</p>
+<strong><a href="https://bloomalyzer.vercel.app/">🚀 Explore the Live Demo »</a></strong>
 
 <p align="center">
 <img src="[Link to your GIF of the slider in action]" alt="Bloomalyzer Demo GIF" width="80%">
