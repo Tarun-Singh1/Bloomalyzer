@@ -35,13 +35,13 @@ const Navbar = () => {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 
                 {/* 2. Replace the old span with the image and a new span */}
-                <NavLink to="hero" className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer">
+                <NavLink to="hero" className="flex items-center space-x-3 rtl:space-x-reverse cursor-pointer" onClick={handleLinkClick}>
                     <img src={appLogo} className="h-8 rounded-full" alt="Bloomalyzer Logo" />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Bloomalyzer</span>
                 </NavLink>
 
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <NavLink to="dashboard" className="text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors">
+                    <NavLink to="dashboard" className="text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-4 py-2 text-center transition-colors" onClick={handleLinkClick}>
                         Dashboard
                     </NavLink>
                     <button onClick={toggleNavbar} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
