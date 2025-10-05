@@ -1,15 +1,16 @@
 import { Link } from 'react-scroll';
-import { useRef } from "react";
+import { useRef, useState, useCallback } from "react";
 import appLogo from '../assets/app_logo.png'; // 1. Import your logo
 
-const NavLink = ({ to, children, ...props }) => {
+const NavLink = ({ to, isSidebarOpen, toogleSidebar, className, children, ...props }) => {
   return (
     <Link
       to={to}
       smooth={true}
       duration={0} // Restored smooth scroll as it's generally better UX
-      offset={-70}
+      offset={-65}
       {...props}
+      className={className}
     >
       {children}
     </Link>

@@ -80,8 +80,13 @@ const Dashboard = () => {
             <button onClick={() => setView('natural')} className={`px-4 py-2 rounded-lg font-semibold transition-all ${view === 'natural' ? 'bg-indigo-600 text-white' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'}`}>Natural View</button>
             <button onClick={() => setView('scientific')} className={`px-4 py-2 rounded-lg font-semibold transition-all ${view === 'scientific' ? 'bg-teal-500 text-white' : 'bg-gray-700 hover:bg-gray-600 text-gray-300'}`}>Scientific View</button>
           </div>
-          <div className="shadow-2xl border-4 border-gray-700 rounded-lg overflow-hidden">
+          <div className="shadow-2xl border-4 border-gray-700 rounded-lg overflow-hidden relative">
             <CustomImageSlider leftImage={images[view].before} rightImage={images[view].after} />
+
+            <div className='before-after-date w-full p-2 flex justify-between absolute bottom-0 left-0 text-md max-md:text-sm max-sm:text-xs font-semibold text-shadow-md text-[#57E8D4]'>
+              <span className='before-date bg-gray-800/80 backdrop-blur-sm px-2 py-1 rounded-md'>Before: 2022</span>
+              <span className='after-date bg-gray-800/80 backdrop-blur-sm px-2 py-1 rounded-md'>After: 2023</span>
+            </div>
           </div>
         </div>
         {/* Right Column: Story */}
