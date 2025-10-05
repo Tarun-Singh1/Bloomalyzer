@@ -67,8 +67,8 @@ const Dashboard = () => {
     scientific: { before: ndviBefore, after: ndviAfter }
   };
   
-  const beforeNdviScore = 0.1819;
-  const afterNdviScore = 0.3577;
+  const beforeNdviScore = 0.1810;
+  const afterNdviScore = 0.3213;
   const percentageIncrease = ((afterNdviScore - beforeNdviScore) / beforeNdviScore) * 100;
 
   return (
