@@ -10,11 +10,6 @@ An interactive web application to visualize and scientifically measure the 2023 
 <br />
 <br />
 <strong><a href="https://bloomalyzer.vercel.app/">🚀 Explore the Live Demo »</a></strong>
-
-<p align="center">
-<img src="[Link to your GIF of the slider in action]" alt="Bloomalyzer Demo GIF" width="80%">
-</p>
-
 <details>
   <summary><strong>Table of Contents</strong></summary>
   <ol>
